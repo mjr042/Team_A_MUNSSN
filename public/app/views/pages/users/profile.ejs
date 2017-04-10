@@ -1,0 +1,176 @@
+
+
+<body>
+<div class="row text-center">
+    <div class="container">
+        <h2 class="section-heading">{{ main.username }}</h2>
+        <h3 class="section-subheading text-muted">Your Profile</h3>
+    </div>
+</div>
+
+<div class="panel panel-info">
+
+    <p>Photo and other contents can be placed here.</p>
+</div>
+
+<script type="text/javascript">
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  }
+}
+</script>
+
+<div id="profilePic">
+  <img alt="Embedded Image" src="{{ main.avatar }}" height="250" width="250"> </img>
+</div>
+
+
+  <button class="accordion">Profile Pic </button>
+<div class="panel">
+      <form ref='uploadForm' 
+      id='uploadForm'
+      action='http://localhost:3000/uploadimagetest' 
+      method='post' 
+      encType="multipart/form-data">
+        <input name="foo" type="file" accept="image/*"/>
+        <input type='submit' value='Upload!' />
+      </form>
+</div>
+
+
+<button class="accordion">About Me</button>
+<div class="panel">
+    <p> about me:  {{ main.aboutme }}  </p>
+    <form action="http://localhost:3000/aboutmetest" method="post">
+    <input type="text" name="fi">
+    <button type="submit">Set About Me</button>
+    </form>
+</div>
+
+<button class="accordion">Resume</button>
+<div class="panel">
+    <p> resume: {{ main.resume }} </p>
+    <form action="http://localhost:3000/resumetest" method="post">
+    <input type="text" name="fa">
+    <button type="submit">Set Resume</button>
+    </form>
+</div>
+
+<button class="accordion">Schedule</button>
+<div class="panel">
+    <p> schedule: {{ main.resume }} </p>
+    <form action="http://localhost:3000/schedtest" method="post">
+    <input type="text" name="fum">
+    <button type="submit">Set Schedule</button>
+    </form>
+</div>
+
+
+
+
+<!-- Timeline -->
+	<ul class="timeline">
+    <form class="form-horizontal">
+        <fieldset>
+
+            <!-- Textarea -->
+            <div class="form-group">
+                <div>
+                    <textarea id="post-area" name="post-area" rows="3" cols="90" placeholder="Have something to share? Post it here!" maxlength="500"></textarea>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+                <div>
+                    <button id="post-submit-btn" name="post-submit-btn" class="btn btn-primary">Post</button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+    <li>
+        <p class="timeline-date">Date Here</p>
+        <div class="timeline-content">
+            <p>Post goes here. Set a character limit? Post goes here. Set a character limit? Post goes here. Set a character limit? Post goes here. Set a character limit?Post goes here. Set a character limit?Post goes here. Set a character limit?Post goes here. Set a character limit? Post goes here. Set a character limit?Post goes here. Set a character limit?Post goes here. Set a character limit? Post goes here. Set a character limit?Post goes here. Set a character limit?Post goes here. Set a character limit? Post goes here. Set a character limit?Post goes here. Set a character limit?Post goes here. Set a character limit? Post goes here. Set a character limit?Post goes here. Set a character limit?Post goes here. Set a character limit?
+            </p>
+            <div class="comment-content">
+                <h6>0 Comments</h6>
+                <div id="posted-comment-area">
+                    <p>Posted Comment goes here</p>
+                    <div id="reply-area">
+                        <p>Posted reply goes here</p>
+                    </div>
+                </div>
+            </div>
+          <form action="http://localhost:3000/comment" method="post">
+            <input type="text" name="gi" placeholder="comment...">
+            <button type="submit">Comment</button>
+          </form>
+
+          <form action="http://localhost:3000/reply" method="post">
+            <input type="text" name="ga" placeholder="reply...">
+            <button type="submit">Reply</button>
+          </form>
+        </div>
+    </li>
+    <li>
+        <p class="timeline-date">Date Here</p>
+        <div class="timeline-content">
+            <p>Post goes here. Set a character limit?</p>
+            <div class="comment-content">
+                <h6>0 Comments</h6>
+                <div id="posted-comment-area">
+                    <p>Posted Comment goes here</p>
+                    <div id="reply-area">
+                        <p>Posted reply goes here</p>
+                    </div>
+                </div>
+          <form action="http://localhost:3000/comment" method="post">
+            <input type="text" name="gi" placeholder="comment...">
+            <button type="submit">Comment</button>
+          </form>
+
+          <form action="http://localhost:3000/reply" method="post">
+            <input type="text" name="ga" placeholder="reply...">
+            <button type="submit">Reply</button>
+          </form>
+        </div>
+    </li>
+    <li>
+        <p class="timeline-date">Date Here</p>
+        <div class="timeline-content">
+            <p>Another fake post to test design</p>
+            <div class="comment-content">
+                <h6>0 Comments</h6>
+                <div id="posted-comment-area">
+                    <p>Posted Comment goes here</p>
+                    <div id="reply-area">
+                        <p>Posted reply goes here</p>
+                    </div>
+                </div>
+          <form action="http://localhost:3000/comment" method="post">
+            <input type="text" name="gi" placeholder="comment...">
+            <button type="submit">Comment</button>
+          </form>
+
+          <form action="http://localhost:3000/reply" method="post">
+            <input type="text" name="ga" placeholder="reply...">
+            <button type="submit">Reply</button>
+          </form>
+        </div>
+    </li>
+</ul>
+</body>
+<!-- End Timeline -->
+

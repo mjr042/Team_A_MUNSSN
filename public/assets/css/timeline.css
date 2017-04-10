@@ -1,0 +1,112 @@
+.timeline {
+  list-style: none;
+}
+.timeline > li {
+  margin-bottom: 60px;
+}
+
+/* for Desktop */
+@media ( min-width : 640px ){
+	
+  .timeline > li {
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+  }
+  
+  /* Style for Post Contents */
+  .timeline-date {
+    width: 110px;
+    float: left;
+    margin-top: 20px;
+  }
+  .timeline-content {
+    width: 75%;
+    float: left;
+    border-left: 3px #e5e5d1 solid;
+    padding-left: 30px;
+	padding-bottom: 20px;
+  }
+
+#timeline {
+     background: #F6F6F6;
+     height: 400px;
+}
+.timeline-line {
+     position: absolute;
+     left: 50%;
+     border-left: 1px solid #AAA;
+     height: 100%;
+     
+}
+.timeline-content-holder {
+	position: relative;
+}
+
+.timeline-content {
+	 position: relative;
+     border: 1px solid #BBB;
+     margin: 6px 10px;
+     background: white;
+     padding: 10px;
+}
+
+.timeline-content-date {
+	 position: relative;
+     margin: 16px 6px;
+     padding-top: 26px;
+}
+
+.timeline-content-date p {
+	 font-size: 24px;
+	 color: #2299DD;
+	 font-family: Verdana, Arial, Times New Roman;
+}
+
+.timeline-arrow {
+	position: absolute;
+	left: 100%;
+	top: 50%;
+}
+.timeline-arrow:after, .timeline-arrow:before {
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.timeline-arrow:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-left-color: #ffffff;
+	border-width: 10px;
+	margin-top: -10px;
+}
+.timeline-arrow:before {
+	border-color: rgba(136, 136, 136, 0);
+	border-left-color: #888888;
+	border-width: 11px;
+	margin-top: -11px;
+}
+
+.timeline-post {
+	font-size: 16px;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	.time-cont .time-cont-col {
+		padding-left: 0;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+	
+}
